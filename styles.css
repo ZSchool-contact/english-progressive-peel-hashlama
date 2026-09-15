@@ -569,6 +569,52 @@
     border-radius: 4px;
   }
 
+  /* ---------- Interactive practice ---------- */
+  .practice-list { display: grid; gap: 1rem; margin-block-start: 1.8rem; }
+  .practice-item {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    padding: 1.1rem 1.3rem;
+  }
+  .practice-q { font-weight: 600; font-size: 1rem; }
+  .practice-options {
+    margin-block-start: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .practice-options button {
+    cursor: pointer;
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 100px;
+    padding: 0.5em 1.1em;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .practice-options button:hover:not(:disabled) { border-color: var(--pine); }
+  .practice-options button:disabled { cursor: default; }
+  .practice-options button.correct {
+    background: rgba(61,81,64,0.14);
+    border-color: var(--pine);
+    color: var(--pine-deep);
+  }
+  .practice-options button.incorrect {
+    background: rgba(164,75,44,0.12);
+    border-color: var(--rust);
+    color: var(--rust-deep);
+  }
+  .practice-feedback {
+    margin-block-start: 0.6em;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+    color: var(--ink-soft);
+  }
+  .practice-feedback.is-correct { color: var(--pine-deep); font-weight: 600; }
+  .practice-feedback.is-incorrect { color: var(--rust-deep); font-weight: 600; }
+
   /* ---------- Footer ---------- */
   footer {
     padding-block: 2.6rem 3.2rem;
